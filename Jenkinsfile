@@ -3,21 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Project') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Cloning project from GitHub'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Static website build successful'
-            }
-        }
-
-        stage('Run Website') {
-            steps {
-                bat 'start index.html'
+                bat 'docker build -t student-notes-portal .'
             }
         }
 
