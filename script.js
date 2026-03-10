@@ -1,19 +1,19 @@
-let notesList = document.getElementById("notes");
-
 function uploadNotes(){
 
 let subject = document.getElementById("subject").value;
 
-if(subject == ""){
-alert("Enter Subject Name");
+if(subject === ""){
+alert("Please enter subject name");
 return;
 }
 
+let list = document.getElementById("notesList");
+
 let li = document.createElement("li");
 
-li.innerHTML = subject + " Notes Uploaded";
+li.innerHTML = subject + " notes uploaded";
 
-notesList.appendChild(li);
+list.appendChild(li);
 
 document.getElementById("subject").value="";
 }

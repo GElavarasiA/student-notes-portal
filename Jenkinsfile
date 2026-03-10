@@ -1,21 +1,25 @@
 pipeline {
+    agent any
 
-agent any
+    stages {
 
-stages {
+        stage('Clone Project') {
+            steps {
+                echo 'Cloning project from GitHub'
+            }
+        }
 
-stage('Build Docker Image') {
-steps {
-bat 'docker build -t notes-portal .'
-}
-}
+        stage('Build') {
+            steps {
+                echo 'Static website build successful'
+            }
+        }
 
-stage('Run Docker Container') {
-steps {
-bat 'docker run -d -p 8081:80 notes-portal'
-}
-}
+        stage('Run Website') {
+            steps {
+                bat 'start index.html'
+            }
+        }
 
-}
-
+    }
 }

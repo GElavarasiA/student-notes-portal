@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Notes Portal</title>
-<link rel="stylesheet" href="style.css">
+    <title>Student Notes Sharing Portal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -10,21 +10,15 @@
 <h1>Student Notes Sharing Portal</h1>
 
 <div class="upload-box">
-<h2>Upload Notes</h2>
+    <h2>Upload Notes</h2>
 
-<input type="text" id="subject" placeholder="Enter Subject Name">
-<input type="file" id="fileUpload">
-
-<button onclick="uploadNotes()">Upload</button>
-
+    <input type="text" id="subject" placeholder="Enter Subject Name">
+    <button onclick="uploadNotes()">Upload</button>
 </div>
 
-<div class="notes-list">
-
-<h2>Available Notes</h2>
-
-<ul id="notes"></ul>
-
+<div class="notes-box">
+    <h2>Available Notes</h2>
+    <ul id="notesList"></ul>
 </div>
 
 <script src="script.js"></script>
